@@ -22,18 +22,42 @@ athletes <- read_csv(here::here("Data","athlete_events.csv"))
 
 table1 <- tbl_summary(
 	athletes,
-	by = Season,
-	include = c(Sex, Age, Height))
+	by = Season, include = c(Sex, Age, Height))
+```
 
+
+```{r}
 #| label: tbl-one
 #| tbl-cap: "Descriptive Statistics on Athletes"
 knitr::kable(table1)
 ```
 
-You can add options to executable code like this
+## Regression results
 
 ```{r}
+linear_model <- lm(Age ~ Height + Weight,
+									 data = athletes)
 
+regression <- tbl_regression(
+	linear_model,
+	intercept = TRUE)
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+#| label: tbl-two
+#| tbl-cap: "Linear Regression of height and weight on age"
+knitr::kable(regression)
+```
+
+## Creating a Figure
+
+```{r}
+#| label: fig-hist
+#| fig-cap: "Distribution of Athletes' Ages"
+histogram <- hist(athletes$Age)
+
+```
+@fig-hist displays a histogram of the ages of the athletes and @tbl-one provides descriptive statistics on sex, age, and height.
+
+count <- inline_text(table1, variable = "Sex", column = "stat_1")
+There were (`r count`) in the summer olympics.

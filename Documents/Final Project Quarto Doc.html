@@ -76,8 +76,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="gtsummary-table" class="level2">
 <h2 class="anchored" data-anchor-id="gtsummary-table">gtsummary table</h2>
 <div class="cell">
+<div id="tbl-one" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Descriptive Statistics on Athletes
+</figcaption>
+<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Characteristic</strong></th>
@@ -125,8 +131,73 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>You can add options to executable code like this</p>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</figure>
+</div>
+</div>
+</section>
+<section id="regression-results" class="level2">
+<h2 class="anchored" data-anchor-id="regression-results">Regression results</h2>
+<div class="cell">
+<div id="tbl-two" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Linear Regression of height and weight on age
+</figcaption>
+<div aria-describedby="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Characteristic</strong></th>
+<th style="text-align: left;"><strong>Beta</strong></th>
+<th style="text-align: left;"><strong>95% CI</strong></th>
+<th style="text-align: left;"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">24, 25</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Height</td>
+<td style="text-align: left;">-0.04</td>
+<td style="text-align: left;">-0.04, -0.04</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Weight</td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;">0.10, 0.11</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="creating-a-figure" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-figure">Creating a Figure</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-hist" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Final-Project-Quarto-Doc_files/figure-html/fig-hist-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of Athletes’ Ages
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-hist" class="quarto-xref">Figure&nbsp;1</a> displays a histogram of the ages of the athletes and <a href="#tbl-one" class="quarto-xref">Table&nbsp;1</a> provides descriptive statistics on sex, age, and height.</p>
 </section>
 
 </main>
