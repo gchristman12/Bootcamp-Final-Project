@@ -22,3 +22,12 @@ tbl_regression(
 
 #Creating a figure
 hist(athletes$Age)
+
+#Creating a function
+
+kgtolbs <- function(x) {
+	lbs <- x*2.20462
+	return(lbs)
+}
+
+
