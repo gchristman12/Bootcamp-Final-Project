@@ -2,25 +2,38 @@
 title: "Final Project Quarto Doc"
 author: "Ginny Christman"
 format: html
+execute: 
+  echo: false
 ---
 
-## Quarto
+## Data Description
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+This document features a historical dataset on the modern Olympic Games, including all the Games from Athens 1896 to Rio 2016. The dataset includes basic descriptive data on all athletes and medal results from their games.
 
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+## gtsummary table
 
 ```{r}
-1 + 1
+#| message: false
+library(tidyverse)
+library(here)
+library(gtsummary)
+
+athletes <- read_csv(here::here("Data","athlete_events.csv"))
+
+table1 <- tbl_summary(
+	athletes,
+	by = Season,
+	include = c(Sex, Age, Height))
+
+#| label: tbl-one
+#| tbl-cap: "Descriptive Statistics on Athletes"
+knitr::kable(table1)
 ```
 
-You can add options to executable code like this 
+You can add options to executable code like this
 
 ```{r}
-#| echo: false
-2 * 2
+
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
